@@ -1,0 +1,412 @@
+#1005
+#include<stdio.h>
+int main()
+{
+    double A,B,r;
+    scanf("%lf%lf",&A,&B);
+    r = ((3.5*A)+(7.5*B))/(3.5+7.5);
+    printf("MEDIA = %.5lf\n",r);
+    return 0;
+}
+#1006
+#include<stdio.h>
+int main()
+{
+    double A,B,C,r;
+    scanf("%lf%lf%lf",&A,&B,&C);
+    r = ((2*A)+(3*B)+(5*C))/(10);
+    printf("MEDIA = %.1lf\n",r);
+    return 0;
+}
+#1007
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,d,diff;
+    cin>>a>>b>>c>>d;
+    diff = (a*b)-(c*d);
+    cout<<"DIFFERENCA = "<<diff<<endl;
+    return 0;
+}
+#1008
+#include<stdio.h>
+int main()
+{
+    int p,h;
+    float w,r;
+    scanf("%d%d%f",&p,&h,&w);
+    r = h * w;
+    printf("NUMBER = %d \n",p);
+    printf("SALARY = U$ %.2f \n",r);
+    return 0;
+}
+#1009
+#include<stdio.h>
+int main()
+{
+    char name[10];
+    double salary,sale,TOTAL;
+    gets(name);
+    scanf("%lf%lf",&salary,&sale);
+    TOTAL = salary + (sale*.15);
+    printf("TOTAL = R$ %.2lf\n",TOTAL);
+    return 0;
+}
+
+#1010
+#include<stdio.h>
+int main()
+{
+    int p1,p2,u1,u2;
+    float pr1,pr2,TOTAL;
+    scanf("%d%d%f",&p1,&u1,&pr1);
+    scanf("%d%d%f",&p2,&u2,&pr2);
+    TOTAL = (u1*pr1) + (u2*pr2);
+    printf("VALOR A PAGAR: R$ %.2f\n",TOTAL);
+    return 0;
+}
+
+#1011
+#include<stdio.h>
+int main()
+{
+    float R,a,b;
+    scanf("%f",&R);
+    a = 4.0/3.0;
+    b = a * 3.14159*(R*R*R);
+    printf("VOLUME = %.3f\n",b);
+    return 0;
+}
+#1012
+#include<stdio.h>
+int main()
+{
+    float A,B,C;
+    scanf("%f%f%f",&A,&B,&C);
+    printf("TRIANGULO: %.3f\n",.5*A*C);
+    printf("CIRCULO: %.3f\n",3.14159*C*C);
+    printf("TRAPEZIO: %.3f\n",.5*(A+B)*C);
+    printf("QUADRADO: %.3f\n",B*B);
+    printf("RETANGULO: %.3f\n",A*B);
+    return 0;
+}
+
+#1013
+#include<stdio.h>
+int main()
+{
+   int a,b,c,d;
+   scanf("%d %d %d",&a,&b,&c);
+   d = (a+b+abs(a-b))/2;
+   d = (d+c+abs(d-c))/2;
+   printf("%d eh o maior\n",d);
+    return 0;
+}
+
+
+#1014
+#include<stdio.h>
+int main()
+{
+    int X;
+    float Y ,d;
+    scanf("%d%f",&X,&Y);
+    d = X / Y;
+    printf("%.3f km/l\n",d);
+    return 0;
+}
+#1015
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    double x1,x2,y1,y2,dis,a,b;
+    scanf("%lf%lf",&x1,&y1);
+    scanf("%lf%lf",&x2,&y2);
+    a = x2-x1;
+    b = y2-y1;
+    dis = sqrt((a*a)+(b*b));
+    printf("%.4f\n",dis);
+    return 0;
+}
+#1016
+#include<stdio.h>
+int main()
+{
+   int n;
+   scanf("%d",&n);
+   printf("%d minutos\n",2*n);
+    return 0;
+}
+#1017
+#include<stdio.h>
+int main()
+{
+   int a,b;
+   float l;
+   scanf("%d%d",&a,&b);
+   l = (b*a)/12.0;
+   printf("%.3f\n",l);
+    return 0;
+}
+#1018
+#include<iostream>
+using namespace std;
+int main()
+{
+    int N,hun = 0,fif = 0,tw = 0,te = 0,fi = 0,two =0,one = 0;
+    int banknotes[7] = {100,50,20,10,5,2,1};
+    cin>>N;
+    int temp = N;
+     hun = N /banknotes[0];
+    N = N - (hun*100);
+     fif = N /banknotes[1];
+    N = N - (fif*50);
+     tw = N /banknotes[2];
+    N = N - (tw*20);
+     te = te /banknotes[3];
+    N = N - (te*10);
+     fi = N / banknotes[4];
+    N = N - (fi*5);
+     two = N / banknotes[5];
+    N = N - (two*2);
+     one = N /banknotes[6];
+    cout<<temp<<endl;
+    cout<<hun<<" nota(s) de R$ 100,00\n";
+    cout<<fif<<" nota(s) de R$ 50,00\n";
+    cout<<tw<<" nota(s) de R$ 20,00\n";
+    cout<<te<<" nota(s) de R$ 10,00\n";
+    cout<<fi<<" nota(s) de R$ 5,00\n";
+    cout<<two<<" nota(s) de R$ 2,00\n";
+    cout<<one<<" nota(s) de R$ 1,00\n";
+    return 0;
+}
+
+#1019
+#include<iostream>
+using namespace std;
+int main()
+{
+    int N,min = 0,hr =0;
+    cin>>N;
+    int t = N;
+    min = N / 60;
+    hr = min / 60;
+    min = min - (hr*60);
+    int sec = N - ((min*60)+(hr*60*60));
+    cout<<hr<<":"<<min<<":"<<sec<<endl;
+    return 0;
+}
+#1020
+#include<iostream>
+using namespace std;
+int main(){
+    int N,y,m,d;
+    cin>>N;
+    y = N/365;
+    N = N - (y*365);
+    m = N / 30;
+    N = N -(m*30);
+    d = N;
+    cout<<y<<" ano(s)"<<endl;
+    cout<<m<<" mes(es)"<<endl;
+    cout<<d<<" dia(s)"<<endl;
+
+    return 0;
+}
+#1035
+#include<iostream>
+using namespace std;
+int main(){
+    int A,B,C,D;
+    cin>>A>>B>>C>>D;
+    if((B>C)&&(D>A)&&((C+D)>(A+B))&&(C>0)&&(D>0)&&(A%2==0))
+    {
+        cout<<"Valores aceitos\n";
+    }
+    else{
+        cout<<"Valores nao aceitos\n";
+    }
+
+
+    return 0;
+}
+
+#1036
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float A,B,C,R1,R2;
+    scanf("%f%f%f",&A,&B,&C);
+    float c = (B*B)-(4*A*C);
+    if(A == 0)
+    {
+        printf("Impossivel calcular\n");
+    }
+    else if(c<0)
+    {
+        printf("Impossivel calcular\n");
+    }
+    else{
+        R1 = (-B+sqrt(c))/(2*A);
+        R2 = (-B-sqrt(c))/(2*A);
+        printf("R1 = %.5f\n",R1);
+        printf("R2 = %.5f\n",R2);
+    }
+    return 0;
+}
+#1037
+#include<stdio.h>
+int main(){
+    float n;
+    scanf("%f",&n);
+     if(n >= 0 && n <= 25.0000)
+    {
+        printf("Intervalo [0,25]\n");
+    }
+    else if(n >= 25.00001 && n<= 50.0000000)
+    {
+        printf("Intervalo (25,50]\n");
+    }
+     else if(n >= 50.00000001 && n<= 75.0000000)
+    {
+        printf("Intervalo (50,75]\n");
+    }
+     else if(n >= 75.00000001 && n <= 100.0000000)
+    {
+        printf("Intervalo (75,100]\n");
+    }
+    else{
+        printf("Fora de intervalo\n");
+    }
+
+    return 0;
+}
+
+#1038
+#include<stdio.h>
+int main()
+{
+    int X,Y;
+    float price;
+    scanf("%d%d",&X,&Y);
+    if(X == 1)
+    {
+        price = Y * 4.00;
+    }
+    else if(X == 2)
+    {
+        price = Y * 4.50;
+    }
+     else if(X == 3)
+    {
+        price = Y * 5.00;
+    }
+     else if(X == 4)
+    {
+        price = Y * 2.00;
+    } else if(X == 5)
+    {
+        price = Y * 1.50;
+    }
+    printf("Total: R$ %.2f\n",price);
+}
+#1041
+#include<iostream>
+using namespace std;
+int main()
+{
+    float x,y;
+    cin>>x>>y;
+    if(x>0&&y>0)
+    {
+        cout<<"Q1\n";
+    }
+    else if(x<0&&y>0)
+    {
+        cout<<"Q2\n";
+    }
+    else if(x<0&&y<0)
+    {
+         cout<<"Q3\n";
+    }
+    else if(x>0&&y<0)
+    {
+         cout<<"Q4\n";
+    }
+    else if(x == 0)
+    {
+        if(y == 0)
+        {
+            cout<<"Origem\n";
+        }
+        else{
+            cout<<"Eixo Y\n";
+        }
+    }
+        else if(y == 0)
+    {
+        if(x == 0)
+        {
+            cout<<"Origem\n";
+        }
+        else{
+            cout<<"Eixo X\n";
+        }
+    }
+    return 0;
+}
+
+#1042
+#include<iostream>
+using namespace std;
+int A[3],temp[3],i;
+int main()
+{
+    for(int i = 0;i<3;i++)
+    {
+        cin>>A[i];
+    }
+    for(int i = 0;i<3;i++)
+    {
+        temp[i] = A[i];
+    }
+    for(int i=0;i<3;i++)
+    {
+        for(int j = i+1;j<3;j++)
+        {
+            if(A[i]>A[j])
+            {
+                int t = A[i];
+                A[i] = A[j];
+                A[j] = t;
+            }
+        }
+    }
+    for(int i = 0;i<3;i++)
+    {
+        cout<<A[i]<<endl;
+    }
+    cout<<endl;
+    for(int i = 0;i<3;i++)
+    {
+        cout<<temp[i]<<endl;
+    }
+}
+#1043
+#include<stdio.h>
+int main()
+{
+    float A,B,C;
+    scanf("%f%f%f",&A,&B,&C);
+    if((A+B)>C && (B+C)>A && (A+C)>B)
+    {
+        printf("Perimetro = %.1f\n",A+B+C);
+    }
+    else{
+        printf("Area = %.1f\n",(((A+B)*C)/2));
+    }
+    return 0;
+}
