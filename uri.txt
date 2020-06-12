@@ -410,3 +410,1063 @@ int main()
     }
     return 0;
 }
+#1044
+#include<iostream>
+using namespace std;
+int main()
+{
+    int A,B,p =0;
+    cin>>A>>B;
+
+    if(A%B ==0 || B%A==0)
+    {
+        cout<<"Sao Multiplos\n";
+    }
+    else{
+        cout<<"Nao sao Multiplos\n";
+    }
+    return 0;
+}
+#1046
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+if(a==b) cout<<"O JOGO DUROU 24 HORA(S)\n";
+if(b>a) cout<<"O JOGO DUROU "<<b-a<<" HORA(S)\n";
+if(a>b) cout<<"O JOGO DUROU "<<(b+24)-a<<" HORA(S)\n";
+    return 0;
+}
+#1071
+#include<iostream>
+using namespace std;
+int main()
+{
+    int X,Y;
+    cin>>X>>Y;
+    if(X>Y)
+    {
+        int t = X;
+        X = Y;
+        Y = t;
+    }
+    int n;
+    int sum =0;
+    if(X%2==0)
+    {
+        X++;
+        n = X;
+    }
+
+    else
+    {
+         n = X + 2;
+    }
+    for(int i = n;i<Y;i+=2)
+    {
+        sum = sum + i;
+    }
+cout<<sum<<endl;
+    return 0;
+}
+#1073
+#include<iostream>
+using namespace std;
+int main()
+{
+    int N;
+    cin>>N;
+    for(int i=2;i<=N;i+=2)
+    {
+        cout<<i<<"^"<<"2"<<" = "<<i*i<<endl;
+    }
+    return 0;
+}
+#1099
+#include<iostream>
+using namespace std;
+int main()
+{
+    int N,X,Y,i,x,sum = 0;
+    cin>>N;
+    for(i=0;i<N;i++)
+    {
+        cin>>X>>Y;
+        if(X>Y)
+        {
+            int temp = X;
+            X = Y;
+            Y = temp;
+        }
+        for(x=X+1;x<Y;x++)
+        {
+            if(x%2!=0)
+            {
+                sum = sum + x;
+            }
+        }
+        cout<<sum<<endl;
+        sum = 0;
+    }
+    return 0;
+}
+#1101
+#include<iostream>
+using namespace std;
+int main()
+{
+    int M,N,sum = 0,i;
+    while(1)
+    {
+        cin>>M>>N;
+        if((M<=0||N<=0))
+        {
+            break;
+        }
+        if(M>N)
+        {
+            int temp = M;
+            M = N;
+            N = temp;
+        }
+        for(i=M;i<=N;i++)
+        {
+            cout<<i<<" ";
+            sum = sum + i;
+        }
+        cout<<"Sum="<<sum<<endl;
+        sum = 0;
+    }
+    return 0;
+}
+#1113
+#include<iostream>
+using namespace std;
+int main()
+{
+   int X,Y;
+   while(1)
+   {
+       cin>>X>>Y;
+       if(X==Y)
+       {
+           break;
+       }
+       else if(X>Y)
+       {
+           cout<<"Decrescente\n";
+       }
+       else{
+        cout<<"Crescente\n";
+       }
+   }
+    return 0;
+}
+#1114
+#include<iostream>
+using namespace std;
+int main()
+{
+   int X;
+   while(1)
+   {
+       cin>>X;
+       if(X==2002)
+       {
+           cout<<"Acesso Permitido\n";
+           break;
+       }
+       cout<<"Senha Invalida\n";
+   }
+    return 0;
+}
+#1015
+#include<iostream>
+using namespace std;
+int main()
+{
+   int X,Y;
+   while(1)
+   {
+       cin>>X>>Y;
+       if(X== 0 || Y == 0)
+       {
+           break;
+       }
+       else if(X>0&&Y>0)
+       {
+           cout<<"primeiro\n";
+       }
+       else if(X<0&&Y>0)
+       {
+           cout<<"segundo\n";
+       }
+        else if(X<0&&Y<0)
+       {
+           cout<<"terceiro\n";
+       }
+       else{
+        cout<<"quarto\n";
+       }
+
+   }
+    return 0;
+}
+#1117
+#include<stdio.h>
+int main()
+{
+    int i,j=0;
+    float A[3],avg,n;
+    while(1)
+    {
+        scanf("%f",&n);
+        if(n>=0 && n<=10)
+        {
+            A[j]=n;
+            j++;
+            if(j==2)
+            {
+                break;
+            }
+        }
+        else{
+            printf("nota invalida\n");
+        }
+    }
+    avg = (A[0] + A[1])/2;
+    printf("media = %.2f\n",avg);
+    return 0;
+}
+#1132
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int X,Y;
+    int n,sum = 0,i;
+    cin>>X>>Y;
+    if(X>Y)
+    {
+        int temp = X;
+        X = Y;
+        Y = temp;
+    }
+     for(i =X;i<=Y;i++)
+        {
+            if(i%13==0)
+            {
+                continue;
+            }
+            sum = sum +i;
+        }
+
+
+    cout<<sum<<endl;
+    return 0;
+}
+
+#1133
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int X,Y;
+    cin>>X>>Y;
+      if(X>Y)
+    {
+        int temp = X;
+        X = Y;
+        Y = temp;
+    }
+    X++;
+    for(int i=X;i<Y;i++)
+    {
+        if(i%5==2 || i %5==3)
+        {
+            cout<<i<<endl;
+        }
+        else{
+            continue;
+        }
+    }
+    return 0;
+}
+#1142
+#include<iostream>
+using namespace std;
+int main()
+{
+    int N,a=1,b=2,c=3;
+    cin>>N;
+    for(int i = 1;i<=N;i++)
+    {
+        cout<<a<<" "<<b<<" "<<c<<" PUM\n";
+        a+=4;
+        b+=4;
+        c+=4;
+    }
+    return 0;
+}
+#1143
+#include<iostream>
+using namespace std;
+int main()
+{
+    int N;
+    cin>>N;
+    for(int i = 1;i<=N;i++)
+    {
+        cout<<i<<" "<<i*i<<" "<<i*i*i<<endl;
+    }
+    return 0;
+}
+#1144
+#include<iostream>
+using namespace std;
+int main()
+{
+    int N;
+    cin>>N;
+    for(int i = 1;i<=N;i++)
+    {
+        cout<<i<<" "<<i*i<<" "<<i*i*i<<endl;
+        cout<<i<<" "<<(i*i)+1<<" "<<(i*i*i)+1<<endl;
+    }
+    return 0;
+}
+#1045
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,a,i,k,j,l,m=1;
+    cin>>a>>n;
+    k = n/a;
+    l = a;
+    for(i=1;i<=k;i++)
+    {
+        cout<<m;
+        for(j= m+1;j<=l;j++)
+        {
+            cout<<" "<<j;
+        }
+         cout<<endl;
+            m += a;
+            l+=a;
+    }
+    return 0;
+}
+#1146
+#include<iostream>
+using namespace std;
+int main()
+{
+    int X,i;
+    while(1)
+    {
+        cin>>X;
+        if(X==0)
+        {
+            break;
+        }
+        else{
+
+            for(i=1;i<=X;i++)
+            {
+                if(i==X)
+                {
+                    cout<<i;
+                }
+                else{
+                    cout<<i<<" ";
+                }
+
+            }
+            cout<<endl;
+        }
+    }
+    return 0;
+}
+#1149
+#include<iostream>
+using namespace std;
+int main()
+{
+   int a,n,j=0,i;
+   cin>>a>>n;
+   while(n<0 || n == 0)
+   {
+       cin>>n;
+   }
+   for(i =0;i<n;i++)
+   {
+       j = j + a + i;
+   }
+   cout<<j<<endl;
+    return 0;
+}
+#1150
+#include<iostream>
+using namespace std;
+int main()
+{
+   int X,Z,sum =0,count =0,i,j;
+   cin>>X;
+   cin>>Z;
+   while(1)
+   {
+       if(X>=Z)
+       {
+           cin>>Z;
+       }
+       if(Z>X)
+       {
+           break;
+       }
+   }
+   while(sum <Z)
+   {
+       sum = sum + X;
+       count ++;
+       X ++;
+   }
+   cout<<count<<endl;
+    return 0;
+}
+#1151
+#include<iostream>
+using namespace std;
+int main()
+{
+   int N,first = 0,second = 1,fibo,i;
+   cin>>N;
+   cout<< first << " "<<second;
+   for( i = 1;i<=N-2;i++)
+   {
+        fibo = first + second;
+        cout<<" "<<fibo;
+        first = second;
+        second = fibo;
+   }
+   cout<<endl;
+    return 0;
+}
+#1154
+#include<stdio.h>
+int main()
+{
+    float avg,x,sum=0;
+    int count =0;
+    while(1)
+    {
+        scanf("%f",&x);
+        if(x<0)
+        {
+            break;
+        }
+        count ++;
+        sum = sum + x;
+    }
+    avg = sum / count;
+    printf("%.2f\n",avg);
+}
+#1156
+#include<stdio.h>
+int main()
+{
+    int i;
+    float S = 0, j = 1;
+    for(i=1;i<=39;i+=2)
+    {
+        S += (i/j);
+        j = (j+j);
+    }
+    printf("%.2f\n",S);
+}
+#1175
+#include<stdio.h>
+int main()
+{
+    int N[20],i;
+    for(i=19;i>=0;i--)
+    {
+        scanf("%d\n",&N[i]);
+    }
+    for(i=0;i<20;i++)
+    {
+        printf("N[%d] = %d\n",i,N[i]);
+    }
+}
+#1176
+#include<stdio.h>
+int main()
+{
+    int i,n,k;
+    long long int N[60];
+    N[0] = 0;
+    N[1] = 1;
+    for(i=2;i<61;i++)
+    {#include<stdio.h>
+int main()
+{
+    int i,n,k,N[1000],j=0;
+    scanf("%d",&k);
+    for(i=0;i<1000;i++)
+    {
+        if(j==k)
+        {
+            j=0;
+        }
+        N[i] = j;
+        j++;
+    }
+    for(i=0;i<1000;i++)
+    {
+        printf("N[%d] = %d\n",i,N[i]);
+    }
+}
+
+        N[i] = N[i-1] + N[i-2];
+    }
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&k);
+        printf("Fib(%d) = %lld\n",k,N[k]);
+    }
+}
+#1177
+#include<stdio.h>
+int main()
+{
+    int i,n,k,N[1000],j=0;
+    scanf("%d",&k);
+    for(i=0;i<100;i++)
+    {
+        if(j==k)
+        {
+            j=0;
+        }
+        N[i] = j;
+        j++;
+    }
+    for(i=0;i<100;i++)
+    {
+        printf("N[%d] = %d\n",i,N[i]);
+    }
+}
+
+#1178
+#include<stdio.h>
+int main()
+{
+    int i;
+    double n;
+    scanf("%lf",&n);
+    for(i=0;i<100;i++)
+    {
+        printf("N[%d] = %.4lf\n",i,n);
+        n/=2.0;
+    }
+}
+#1158
+#include<iostream>
+using namespace std;
+int main()
+{
+    int N,X,Y,sum = 0,i,j;
+    cin>>N;
+    for(i=0;i<N;i++)
+    {
+        cin>>X>>Y;
+        if(X%2==0)
+        {
+            X++;
+        }
+    for(j=1;j<=Y;j++)
+        {
+            sum = sum + X;
+            X= X+2;
+        }
+        cout<<sum<<endl;
+        sum = 0;
+    }
+    return 0;
+}
+#1159
+#include<iostream>
+using namespace std;
+int main()
+{
+
+   int X,sum = 0,i;
+   while(1)
+   {
+       cin>>X;
+       if(X==0)
+       {
+           break;
+       }
+       if(X%2!=0)
+       {
+           X++;
+       }
+       for(i=1;i<=5;i++)
+       {
+           sum = sum + X;
+           X+=2;
+       }
+       cout<<sum<<endl;
+       sum =0;
+   }
+    return 0;
+}
+#1166
+#include<iostream>
+using namespace std;
+int main()
+{
+
+   int X,sum = 0,i,N,j;
+   cin>>N;
+   for(i=0;i<N;i++)
+   {
+       cin>>X;
+       for(j=1;j<X;j++)
+       {
+           if(X%j==0)
+           {
+               sum = sum + j;
+           }
+       }
+       if(sum == X)
+       {
+           cout<<X<<" eh perfeito\n";
+       }
+       else{
+        cout<<X<<" nao eh perfeito\n";
+       }
+       sum = 0;
+   }
+
+    return 0;
+}
+#1165
+#include<iostream>
+using namespace std;
+int main()
+{
+
+   int X,i,N,j,p=1;
+   cin>>N;
+   for(i=0;i<N;i++)
+   {
+       cin>>X;
+       for(j=2;j<X;j++)
+       {
+           if(X%j==0)
+           {
+               p =0;
+               break;
+           }
+       }
+       if(p == 0)
+       {
+           cout<<X<<" nao eh primo\n";
+       }
+       else{
+        cout<<X<<" eh primo\n";
+       }
+       p = 1;
+   }
+
+    return 0;
+}
+#1181
+#include<stdio.h>
+int main()
+{
+   double M[12][12],sum = 0;
+   int i,j,row,L;
+   char X[2];
+   scanf("%d %c",&L,&X);
+   for(i=0;i<12;i++)
+   {
+       for(j=0;j<12;j++)
+       {
+           scanf("%lf",&M[i][j]);
+       }
+   }
+   for(i=0;i<12;i++)
+   {
+       sum = sum + M[L][i];
+   }
+   if(X[0]=='S') printf("%.1lf\n",sum);
+   else if(X[0]=='M') printf("%.1lf\n",sum/12);
+    return 0;
+}
+#1182
+#include<stdio.h>
+int main()
+{
+   double M[12][12],sum = 0;
+   int i,j,row,C;
+   char T[2];
+   scanf("%d %c",&C,&T);
+   for(i=0;i<12;i++)
+   {
+       for(j=0;j<12;j++)
+       {
+           scanf("%lf",&M[i][j]);
+       }
+   }
+   for(i=0;i<12;i++)
+   {
+       sum = sum + M[i][C];
+   }
+   if(T[0]=='S') printf("%.1lf\n",sum);
+   else if(T[0]=='M') printf("%.1lf\n",sum/12);
+    return 0;
+}
+#1183
+#include<stdio.h>
+int main()
+{
+   double M[12][12],sum = 0;
+   int i,j,n=1;
+   char O[2];
+   scanf("%s",&O);
+   for(i=0;i<12;i++)
+   {
+       for(j=0;j<12;j++)
+       {
+           scanf("%lf",&M[i][j]);
+       }
+   }
+   for(i=0;i<12;i++)
+   {
+       for(j=n;i<12;j++)
+       {
+           sum=+M[i][j];
+           n++;
+       }
+   }
+   if(O[0]=='S') printf("%.1lf\n",sum);
+   else if(O[0]=='M') printf("%.1lf\n",sum/66);
+    return 0;
+}
+
+#1183
+#include<stdio.h>
+int main()
+{
+    double N[12][12],sum;
+    char X[2];
+    scanf("%c",&X);
+    int n=1,i,j;
+    for(i=0;i<12;i++)
+    {
+        for(j=0;j<12;j++)
+        {
+            scanf("%lf",&N[i][j]);
+        }
+    }
+    for(i=0;i<12;i++)
+    {
+        for(j=n;j<12;j++)
+        {
+            sum = sum + N[i][j];
+        }
+         n++;
+    }
+    if(X[0]=='S') printf("%.1lf\n",sum);
+    else if (X[0] == 'M') printf("%.1lf\n",sum/66.0);
+}
+#1184
+#include<stdio.h>
+int main()
+{
+    double N[12][12],sum =0;
+    char c[2];
+    scanf("%s",c);
+    int n=1,i,j;
+    for(i=0;i<12;i++)
+    {
+        for(j=0;j<12;j++)
+        {
+            scanf("%lf",&N[i][j]);
+        }
+    }
+    for(i=1;i<12;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            sum = sum + N[i][j];
+        }
+         n++;
+    }
+    if(c[0]=='S') printf("%.1lf\n",sum);
+    else  printf("%.1lf\n",sum/66.0);
+}
+#1185
+#include<stdio.h>
+int main()
+{
+    double M[12][12],sum =0;
+    char O[2];
+    scanf("%s",O);
+    int n=11,i,j;
+    for(i=0;i<12;i++)
+    {
+        for(j=0;j<12;j++)
+        {
+            scanf("%lf",&M[i][j]);
+        }
+    }
+    for(i=0;i<12;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            sum = sum + M[i][j];
+        }
+         n--;
+    }
+    if(O[0]=='S') printf("%.1lf\n",sum);
+    else  printf("%.1lf\n",sum/66.0);
+}
+#1186
+#include<stdio.h>
+int main()
+{
+    double M[12][12],sum =0;
+    char O[2];
+    scanf("%s",O);
+    int n=11,i,j;
+    for(i=0;i<12;i++)
+    {
+        for(j=0;j<12;j++)
+        {
+            scanf("%lf",&M[i][j]);
+        }
+    }
+    for(i=1;i<12;i++)
+    {
+        for(j=n;j<12;j++)
+        {
+            sum = sum + M[i][j];
+        }
+         n--;
+    }
+    if(O[0]=='S') printf("%.1lf\n",sum);
+    else  printf("%.1lf\n",sum/66.0);
+}
+#1048
+#include<stdio.h>
+int main()
+{
+    float a,salary,b;
+    int p;
+    scanf("%f",&a);
+    if(a>=0.00 && a<=400.00)
+    {
+        b = (a*15)/100;
+        salary = a+b;
+        p = 15;
+    }
+    else if(a>400.00 && a<=800.00)
+    {
+        b = (a*12)/100;
+        salary = a+b;
+        p =12;
+    }
+    else if(a>800.00 && a<=1200.00)
+    {
+        b = (a*10)/100;
+        salary = a+b;
+        p =10;
+    }
+    else if(a>1200.00 && a<=2000.00)
+    {
+        b = (a*7)/100;
+        salary = a+b;
+        p =7;
+    }
+    else if(a>2000.00)
+    {
+        b = (a*4)/100;
+        salary = a +b;
+        p = 4;
+    }
+    printf("Novo salario: %.2f\n",salary);
+    printf("Reajuste ganho: %.2f\n",b);
+    printf("Em percentual: %d %%\n",p);
+    return 0;
+}
+#1050
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    if(n==61) cout<<"Brasilia\n";
+    else if(n==71) cout<<"Salvador\n";
+    else if(n==11) cout<<"Sao Paulo\n";
+    else if(n==21) cout<<"Rio de Janeiro\n";
+    else if(n==32) cout<<"Juiz de Fora\n";
+    else if(n==19) cout<<"Campinas\n";
+    else if(n==27) cout<<"Vitoria\n";
+    else if(n==31) cout<<"Belo Horizonte\n";
+    else cout<<"DDD nao cadastrado\n";
+    return 0;
+}
+#1074
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,t,n;
+    cin>>t;
+    for(i=0;i<t;i++)
+    {
+        cin>>n;
+        if(n==0) cout<<"NULL\n";
+        else if(n>0)
+        {
+            if(n%2==0) cout<<"EVEN POSITIVE\n";
+            else{
+                cout<<"ODD POSITIVE\n";
+            }
+        }
+        else if(n<0)
+        {
+            if(n%2==0) cout<<"EVEN NEGATIVE\n";
+            else cout<<"ODD NEGATIVE\n";
+        }
+    }
+    return 0;
+}
+#1095
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,j;
+    for(j=60,i=1;j>=0;j-=5,i+=3)
+    {
+        cout<<"I="<<i<<" J="<<j<<endl;
+    }
+    return 0;
+}
+#1187
+#include<stdio.h>
+int main()
+{
+    double M[12][12],sum =0;
+    char O[2];
+    scanf("%s",O);
+    int i,j,n=1,m=10;
+    for(i=0;i<12;i++)
+    {
+        for(j=0;j<12;j++)
+        {
+            scanf("%lf",&M[i][j]);
+        }
+    }
+    for(i=0;i<5;i++)
+    {
+        for(j=n;j<=m;j++)
+        {
+            sum = sum + M[i][j];
+        }
+         n++;
+         m--;
+    }
+    if(O[0]=='S') printf("%.1lf\n",sum);
+    else  printf("%.1lf\n",sum/30.0);
+}
+#1188
+#include<stdio.h>
+int main()
+{
+    double M[12][12],sum =0;
+    char O[2];
+    scanf("%s",O);
+    int i,j,n=5,m=6;
+    for(i=0;i<12;i++)
+    {
+        for(j=0;j<12;j++)
+        {
+            scanf("%lf",&M[i][j]);
+        }
+    }
+    for(i=7;i<12;i++)
+    {
+        for(j=n;j<=m;j++)
+        {
+            sum = sum + M[i][j];
+        }
+         n--;
+         m++;
+    }
+    if(O[0]=='S') printf("%.1lf\n",sum);
+    else  printf("%.1lf\n",sum/30.0);
+}
+#1189
+#include<stdio.h>
+int main()
+{
+    double M[12][12],sum =0;
+    char O[2];
+    scanf("%s",O);
+    int i,j,n=1,m=10;
+    for(i=0;i<12;i++)
+    {
+        for(j=0;j<12;j++)
+        {
+            scanf("%lf",&M[i][j]);
+        }
+    }
+    for(i=0;i<5;i++)
+    {
+        for(j=n;j<=m;j++)
+        {
+            sum = sum + M[j][i];
+        }
+         n++;
+         m--;
+    }
+    if(O[0]=='S') printf("%.1lf\n",sum);
+    else  printf("%.1lf\n",sum/30.0);
+}
+#1837
+#include <stdio.h>
+int main()
+{
+    int a,b,c,d,e,f,q,r;
+    scanf("%d%d", &a, &b);
+    if(a<0)
+    {
+        e=b;
+        if(b<0) e=b*-1;
+        for(r=0; r<e; r++)
+        {
+            f=a-r;
+            if(f%b==0) break;
+        }
+        q=f/b;
+    }
+    else
+    {
+        q=a/b;
+        r=a%b;
+    }
+    printf("%d %d\n",q,r);
+    return 0;
+}
+
