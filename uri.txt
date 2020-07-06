@@ -668,6 +668,24 @@ int main()
     cout<<sum<<endl;
     return 0;
 }
+#1929
+#include<stdio.h>
+int main()
+{
+    int a,b,c,d,ar[4],temp;
+    while(scanf("%d",&a)!=EOF){
+        scanf("%d %d %d",&b ,&c, &d);
+        if(a<b){temp=a;a=b;b=temp;}
+        if(a<c){temp=a;a=c;c=temp;}
+        if(a<d){temp=a;a=d;d=temp;}
+        if(b<c){temp=b;b=c;c=temp;}
+        if(b<d){temp=b;b=d;d=temp;}
+        if(c<d){temp=c;c=d;d=temp;}
+        if(a < b+c || b < c+d)printf("S\n");
+        else printf("N\n");
+    }
+    return 0;
+}
 
 #1133
 #include<iostream>
@@ -1469,4 +1487,832 @@ int main()
     printf("%d %d\n",q,r);
     return 0;
 }
+#2802
+n = int(input())
+a = (n*(n-1))/2
+b =  (n *(n-1) * (n-2)*(n-3))/(4*3*2)
+r = 1+a+b
+print(int(r))
+#1021
+#include <stdio.h>
+int main()
+{
+    double A,D,E;
+    scanf ("%lf",&A);
+    int N,a,b,c,d,e,f,g,h,i,j,k,l,B,m,n,o,p,q,r,s,t,u;
+    N=A;
+    a=N/100;b=N%100;c=b/50;d=b%50;e=d/20;f=d%20;g=f/10;h=f%10;i=h/5;j=h%5;k=j/2;l=j%2;
+
+    E=A*100;
+    B=(int) E;
+    m=B%100;n=m/50;o=m%50;p=o/25;q=o%25;r=q/10;s=q%10;t=s/5;u=s%5;
+
+    printf ("NOTAS:\n");
+    printf ("%d nota(s) de R$ 100.00\n",a);
+    printf ("%d nota(s) de R$ 50.00\n",c);
+    printf ("%d nota(s) de R$ 20.00\n",e);
+    printf ("%d nota(s) de R$ 10.00\n",g);
+    printf ("%d nota(s) de R$ 5.00\n",i);
+    printf ("%d nota(s) de R$ 2.00\n",k);
+
+    printf ("MOEDAS:\n");
+
+    printf ("%d moeda(s) de R$ 1.00\n",l);
+    printf ("%d moeda(s) de R$ 0.50\n",n);
+    printf ("%d moeda(s) de R$ 0.25\n",p);
+    printf ("%d moeda(s) de R$ 0.10\n",r);
+    printf ("%d moeda(s) de R$ 0.05\n",t);
+    printf ("%d moeda(s) de R$ 0.01\n",u);
+
+    return 0;
+}
+#1040
+#include <stdio.h>
+int main (){
+	float a, b, c, d, media, exame;
+
+	scanf("%f %f %f %f", &a, &b, &c, &d);
+
+	media = (a*2+b*3+c*4+d*1)/10;
+
+	printf("Media: %.1f\n", media);
+
+	if (media >= 7.0){
+		printf("Aluno aprovado.\n");
+	}
+
+	else if (media>= 5){
+		printf("Aluno em exame.\n");
+		
+		scanf("%f", &exame);
+			
+		printf("Nota do exame: %.1f\n", exame);
+
+
+			if (media + exame / 2.0 >= 5){
+				printf("Aluno aprovado.\n");
+			}
+			else{
+				printf("Aluno reprovado.\n");
+			}
+
+			printf("Media final: %.1f\n",(media + exame) / 2);
+
+	}
+	else {
+		printf("Aluno reprovado.\n");
+	}
+
+	return 0;
+
+}
+#1045
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    double a,b,c;
+
+    cin >> a >> b >> c;
+
+    if(a >= (b+c) || b >= (a+c) || c >= (a+b))
+         cout << "NAO FORMA TRIANGULO"<<endl;
+    else if(a*a == (b*b + c*c) || b*b == (a*a + c*c) || c*c == (a*a + b*b))
+           cout << "TRIANGULO RETANGULO"<<endl;
+    else if(a*a > (b*b + c*c) || b*b > (a*a + c*c) || c*c > (a*a + b*b))
+           cout << "TRIANGULO OBTUSANGULO"<<endl;
+    else if(a*a < (b*b + c*c) || b*b < (a*a + c*c) || c*c < (a*a + b*b))
+           cout << "TRIANGULO ACUTANGULO"<<endl;
+    if(a == b && a == c)
+            cout << "TRIANGULO EQUILATERO"<<endl;
+    if((a == b && a != c)  || (a == c && a != b) || (b == c && b != a))
+            cout << "TRIANGULO ISOSCELES"<<endl;
+
+return 0;}
+#1061
+#include <stdio.h>
+int main(){
+ int h, hh, hr,m,mm,mr,d,dr,dm,s,sr,ss;
+
+ scanf("Dia %d",&d);
+ scanf("%d : %d : %d\n",&h,&m,&s);
+ scanf("Dia %d",&dm);
+ scanf("%d : %d : %d",&hh,&mm,&ss);
+
+s = ss - s;
+m = mm - m;
+h = hh - h;
+d = dm - d;
+
+if(s<0){
+	s+=60;
+	m--;
+}
+
+if(m<0){
+	m+=60;
+	h--;
+}
+
+if(h<0){
+	h+=24;
+	d--;
+}
+
+    printf("%d dia(s)\n", d);
+    printf("%d hora(s)\n", h);
+    printf("%d minuto(s)\n", m);
+    printf("%d segundo(s)\n", s);
+
+
+ return 0;
+}
+
+
+#1190
+#include<stdio.h>
+int main()
+{
+    double N[12][12],sum =0;
+    char O[2];
+    int i ,j,n=1,m=10;
+    scanf("%s",&O);
+     for(i=0;i<12;i++)
+    {
+        for(j=0;j<12;j++)
+        {
+            scanf("%lf",&N[i][j]);
+        }
+    }
+    for(i=11;i>6;i--)
+    {
+        for(j=n;j<=m;j++)
+        {
+            sum+=N[j][i];
+        }
+    n++;
+    m--;
+    }
+    if(O[0]=='S') printf("%.1lf\n",sum);
+    else  printf("%.1lf\n",sum/30.0);
+}
+#1541
+#include<iostream>
+using namespace std;
+int main()
+{
+    int A,B,C,i;
+    double area;
+    while(1)
+    {
+        cin>>A;
+        if(A==0)
+        {
+            break;
+        }
+        cin>>B>>C;
+        area = A*B*100.0/C;
+        for(i=1;i*i<=area;i++);
+        i--;
+        cout<<i<<endl;
+
+    }
+}
+
+#1566
+#include<stdio.h>
+int main()
+{
+     int n;
+   while(scanf("%d",&n)!=EOF)
+   {
+    if(n==0) {
+        printf("vai ter copa!\n");
+    }
+    else{
+        printf("vai ter duas!\n");
+    }
+   }
+}
+#1759
+#include<iostream>
+using namespace std;
+int main()
+{
+  int N,i;
+  cin>>N;
+  for(i=1;i<=N;i++)
+  {
+      if(i==N)
+      {
+          cout<<"Ho!"<<endl;
+      }
+      else{
+        cout<<"Ho ";
+      }
+
+  }
+}
+#1789
+#include<stdio.h>
+int main()
+{
+     int n,k,i,l,s;
+   while(scanf("%d",&n)!=EOF)
+   {
+    k = 0;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&s);
+        if(k<=s)
+        {
+            k = s;
+        }
+    }
+    if(k<10) l = 1;
+    else if(k<20) l =2;
+    else l = 3;
+    printf("%d\n",l);
+   }
+}
+#1866
+#include<iostream>
+using namespace std;
+int main()
+{
+  int n,sum =0,i,x,j,s;
+  cin>>n;
+  for(i =0;i<n;i++)
+  {
+      cin>>x;
+      for(j=1;j<=x;j++)
+      {
+          (j%2==0)?s=-1:s=1;
+          sum += s;
+      }
+      cout<<sum<<endl;
+      sum = 0;
+  }
+
+}
+#1959
+#include<stdio.h>
+int main()
+{
+    long long a ,b;
+    while(scanf("%lld",&a)!= EOF){
+        scanf("%lld",&b);
+        printf("%lld\n",a*b);
+
+    }
+}
+#1957
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int V,r;//input dec
+    string ans ="";
+    char hex[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+    cin>>V;
+    while(V>0)
+    {
+        r = V%16;
+        ans = hex[r] + ans;
+        V = V/16;
+    }
+    cout<<ans<<endl;
+}
+
+#2060
+#include<iostream>
+using namespace std;
+int main()
+{
+    int N,i,t=0,th=0,f=0,fi=0,X;
+    cin>>N;
+    for(i=0;i<N;i++)
+    {
+        cin>>X;
+        if(X%2==0) t++;
+        if(X%3==0) th++;
+        if(X%4==0) f++;
+        if(X%5==0) fi++;
+    }
+    cout<<t<<" Multiplo(s) de 2\n";
+    cout<<th<<" Multiplo(s) de 3\n";
+    cout<<f<<" Multiplo(s) de 4\n";
+    cout<<fi<<" Multiplo(s) de 5\n";
+    return 0;
+}
+#2763
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+  char a[50];
+  int i;
+  gets(a);
+  int n = strlen(a);
+for( i=0;i<n;i++)
+{
+    if(a[i]== '.' || a[i]== '-' )
+    {
+        printf("\n");
+    }
+    if(a[i]== '.' || a[i]== '-')
+    {
+        continue;
+    }
+   printf("%c",a[i]);
+}
+printf("\n");
+}
+#2764
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+  char a[50];
+ gets(a);
+ int n = strlen(a);
+ int i;
+ printf("%c%c%c%c%c%c%c%c\n",a[3],a[4],a[2],a[0],a[1],a[5],a[6],a[7]);
+ printf("%c%c%c%c%c%c%c%c\n",a[6],a[7],a[2],a[3],a[4],a[5],a[0],a[1]);
+ printf("%c%c-%c%c-%c%c\n",a[0],a[1],a[3],a[4],a[6],a[7]);
+}
+
+
+#2765
+#include<iostream>
+#include<string>
+using namespace std;
+int main() {
+	string str;
+	getline(cin,str);
+	for(int i=0;i<str.length();i++)
+	{
+		if(str[i]==',')cout<<endl;
+		else cout<<str[i];
+	}
+	cout<<endl;
+}
+
+
+
+#2766
+#include<iostream>
+#include<string>
+using namespace std;
+int main() {
+	string str;
+	int i;
+	for(int i=1;i<=10;i++)
+	{
+		cin>>str;
+		if(i==3||i==7||i==9)cout<<str<<endl;
+	}
+
+}
+
+
+#2861
+C = int(input())
+while(C!=0):
+    a = input()
+    print('gzuz')
+    C-=1
+
+#2862
+N = int(input())
+while(N!=0):
+    a = int(input())
+    if(a<=8000):
+        print('Inseto!')
+    else:
+        print('Mais de 8000!')
+    N-=1
+
+
+#2867
+C = int(input())
+
+s =1
+count =0
+while(C!=0):
+
+    N,M = input().split()
+    N = int(N)
+    M = int(M)
+    temp = N**M
+
+    while(temp!=0):
+        rem = temp % 10
+        count += 1
+        temp = temp//10
+    print(count)
+    s = 1
+    count = 0
+
+    C-=1
+
+
+#3055
+
+#include <stdio.h>
+
+int main()
+{
+    int A, M;
+
+    scanf("%d%d", &A, &M);
+
+    printf("%d\n", M * 2 - A);
+
+    return 0;
+}
+#2750
+print("---------------------------------------")
+print("|  decimal  |  octal  |  Hexadecimal  |")
+print("---------------------------------------")
+print("|      0    |    0    |       0       |")
+print("|      1    |    1    |       1       |")
+print("|      2    |    2    |       2       |")
+print("|      3    |    3    |       3       |")
+print("|      4    |    4    |       4       |")
+print("|      5    |    5    |       5       |")
+print("|      6    |    6    |       6       |")
+print("|      7    |    7    |       7       |")
+print("|      8    |   10    |       8       |")
+print("|      9    |   11    |       9       |")
+print("|     10    |   12    |       A       |")
+print("|     11    |   13    |       B       |")
+print("|     12    |   14    |       C       |")
+print("|     13    |   15    |       D       |")
+print("|     14    |   16    |       E       |")
+print("|     15    |   17    |       F       |")
+print("---------------------------------------")
+
+#2753
+print("97 e a")
+
+print("98 e b")
+
+print("99 e c")
+
+print("100 e d")
+
+print("101 e e")
+
+print("102 e f")
+
+print("103 e g")
+
+print("104 e h")
+
+print("105 e i")
+
+print("106 e j")
+
+print("107 e k")
+
+print("108 e l")
+
+print("109 e m")
+
+print("110 e n")
+
+print("111 e o")
+
+print("112 e p")
+
+print("113 e q")
+
+print("114 e r")
+
+print("115 e s")
+
+print("116 e t")
+
+print("117 e u")
+
+print("118 e v")
+
+print("119 e w")
+
+print("120 e x")
+
+print("121 e y")
+
+print("122 e z")
+
+#2756
+#include <iostream>
+ 
+using namespace std;
+ 
+int main(int argc, char** argv) {
+	printf("       A\n");
+	printf("      B B\n");
+	printf("     C   C\n");
+	printf("    D     D\n");
+	printf("   E       E\n");
+	printf("    D     D\n");
+	printf("     C   C\n");
+	printf("      B B\n");
+	printf("       A\n");
+	return 0;
+}
+
+#1166
+def led(d):
+    if (d==0 or d==6 or d==9):
+        rtn = 6
+    elif (d==2 or d==3 or d==5):
+        rtn = 5
+    elif (d==1):
+        rtn = 2
+    elif (d==4):
+        rtn = 4
+    elif (d==7):
+        rtn = 3
+    elif (d==8):
+        rtn = 7
+    return rtn
+
+
+N = int(input())
+while(N!=0):
+    V = int(input())
+    temp = V
+    sum = 0
+    while(temp!=0):
+        rem = temp%10
+        sum+= led(rem)
+        temp = temp//10
+    print(sum ,"leds")
+    sum =0
+    N-=1
+
+
+
+#1259
+  
+#include <stdio.h>
+#include <stdlib.h>
+
+int ascending(void const *a, void const *b )
+{
+    return (*(int*)a - *(int*)b );
+}
+
+int descending(void const *a, void const *b )
+{
+    return (*(int*)b - *(int*)a );
+}
+
+int main(){
+    int n, i, num, par, impar;
+    
+    scanf("%d", &n);
+    par = 0;
+    impar = 0;
+    int np[n];
+    int ni[n];
+    
+    for(i = 0; i < n; i++){
+        scanf("%d", &num);
+        if(num%2 == 0){
+            np[par] = num;
+            par++;
+        }else{
+            ni[impar] = num;
+            impar++;
+        }
+    }
+    qsort(np, par, sizeof(int), ascending);
+    qsort(ni, impar, sizeof(int), descending);
+    for(i = 0; i < par; i++){
+        printf("%d\n",np[i]);
+    }
+    for(i = 0; i < impar; i++){
+        printf("%d\n",ni[i]);
+    }
+    
+    return 0;
+}
+
+
+#1049
+a = input()
+b = input()
+c = input()
+
+
+if a == 'vertebrado':
+    if b== 'ave':
+        if c== 'carnivoro':
+            print('aguia')
+        if c== 'onivoro':
+            print('pomba')
+    elif b=='mamifero':
+        if c== 'onivoro':
+            print('homem')
+        if c=='herbivoro':
+            print('vaca')
+
+elif a=='invertebrado':
+    if b== 'inseto':
+        if c=='hematofago':
+            print('pulga')
+        if c=='herbivoro':
+            print('lagarta')
+    elif b=='anelideo':
+        if c=='hematofago':
+            print('sanguessuga')
+        if c== 'onivoro':
+            print('minhoca')
+
+#1096
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int j,i;
+    for(i=1;i<=9;i+=2)
+    {
+        for(j=7;j>=5;j--)
+        {
+            cout<<"I="<<i<<" J="<<j<<endl;
+        }
+    }
+}
+#1097
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int j,i,k=7;
+    for(i=1;i<=9;i+=2)
+    {
+
+        for(j=7;j>=5;j--)
+        {
+            cout<<"I="<<i<<" J="<<k<<endl;
+            k--;
+        }
+        k+=5;
+    }
+}
+#1098
+#include<stdio.h>
+
+int main()
+{
+    float i, j;
+    int k, l;
+    for (i = 0.0;i <= 2.1;i = i + .2){
+        for(j = 1.0;j <= 3.0;j = j + 1.0){
+           if(i>0.0 && i <1.0)printf("I=%.1f J=%.1f\n", i, j+i);
+           else if(i>1.0 && i<2.0)printf("I=%.1f J=%.1f\n", i, j+i);
+    else { k= i;
+           l=k + j;
+        printf("I=%d J=%d\n", k, l);
+           }
+        }
+    }
+
+    return 0;
+}
+#1034
+import java.io.IOException;
+
+import java.util.Scanner;
+
+  
+
+public class Main {
+
+  
+
+    public static void main(String[] args) throws IOException {
+
+  
+
+       int X = 0, fuel = 0, customerAlcohol = 0, customerGasolin = 0, customerDisel = 0;
+
+        Scanner input = new Scanner(System.in);
+
+         
+
+         
+
+         
+
+        while (X != 4) {
+
+            X = input.nextInt();
+
+            if (X == 1) {
+
+                customerAlcohol+=1;
+
+            }else if (X == 2) {
+
+                customerGasolin += 1;
+
+            }else if (X == 3) {
+
+                customerDisel += 1;
+
+            }
+
+             
+
+        }
+
+        //Alcool: 1 Gasolina: 2 Diesel: 0
+
+        System.out.print("MUITO OBRIGADO\n");
+
+        System.out.print("Alcool: "+customerAlcohol+"\n");
+
+        System.out.print("Gasolina: "+customerGasolin+"\n");
+
+        System.out.print("Diesel: "+customerDisel+"\n");
+
+  
+
+    }
+
+  
+
+}
+
+
+#3040
+N = int(input())
+
+while(N!=0):
+    h,d,g = input().split()
+    h = int(h)
+    d = int(d)
+    g = int(g)
+    if (h>=200 and h<=300) and d>=50 and g>=150:
+        print('Sim')
+    else:
+        print('Nao')
+    N-=1
+
+
+#2781
+#include <stdio.h>
+
+void main ()
+{
+
+	int a;
+	float b;
+	char c;
+	char d[50];
+
+	scanf("%d %f %c %[^\n]", &a, &b, &c, d);
+
+	printf("%d%f%c%s\n", a, b, c, d);
+	printf("%d\t%f\t%c\t%s\n", a, b, c, d);
+	printf("%10d%10f%10c%10s\n", a, b, c, d);
+
+}
+#2762
+#include<stdio.h>
+int main() {
+	long long int a,b;
+	scanf("%lld.%lld",&a,&b);
+	printf("%lld.%lld\n",b,a);
+}
+
+
+
+#2755
+print('"Ro\'b\'er\tto\\/"')
+print('(._.) ( l: ) ( .-. ) ( :l ) (._.)')
+print('(^_-) (-_-) (-_^)')
+print('("_") (\'.\')')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
